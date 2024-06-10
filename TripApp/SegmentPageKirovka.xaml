@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TripApp.SegmentPageKirovka"
+             BackgroundColor="White"
+             Background="White">
+    <ContentPage.Content>
+        <StackLayout Padding="0">
+            <ImageButton Source="kirovka.jpg" Aspect="AspectFill" Opacity="20"
+                HeightRequest="200" WidthRequest="400"/>
+            <Label/>
+            <Label Text="Кировка" FontSize="Title" HorizontalOptions="Start" FontAttributes="Bold" Margin="10,0,0,0"/>
+            <Label/>
+            <Label Text="ЮУрГу, пр-т Ленина 76" FontSize="Subtitle" HorizontalOptions="Start" Margin="10,0,0,0"/>
+            <Label/>
+            <Label Text="Дата: Круглосуточно" FontSize="Subtitle" HorizontalOptions="Start" Margin="10,0,0,0"/>
+            <Label/>
+            <Label Text="Стоимость: бесплатно" FontSize="Subtitle" HorizontalOptions="Start" Margin="10,0,0,20" />
+
+            <Label Text="Описание" FontSize="Subtitle" HorizontalOptions="Start" FontAttributes="Bold" Margin="10,0,0,0"/>
+            <Label Text="Пешеходный участок улицы Кирова в центре Челябинска." FontSize="Body" Margin="10,0,0,0"/>
+            <Label Text="Долгое время называлась «Челябинским Арбатом», по ставшему нарицательным названию московского Арбата. Кировка проходит в пределах Центрального района, 
+                   по южной части улицы Кирова от улицы Труда до проспекта Ленина и площади Революции." FontSize="Body" Margin="10,0,0,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

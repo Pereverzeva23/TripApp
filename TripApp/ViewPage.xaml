@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TripApp.ViewPage"
+             BackgroundColor="White"
+             Title="Обзор"
+             >
+    <VerticalStackLayout>
+        <Label
+          Padding="20"
+          Text="Топ 5 мест Челябинска"
+          SemanticProperties.HeadingLevel="Level1"
+          FontSize="22"
+          FontAttributes="Bold"
+          FontFamily="Times New Roman"
+          HorizontalOptions="Start" />
+
+
+            <ScrollView Orientation="Horizontal">
+            <HorizontalStackLayout >
+                <Grid Padding="15,0,5,0">
+                    <Border Stroke="Gray" HeightRequest="160" WidthRequest="160" >
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                        <ImageButton Source="kirovka.jpg" Aspect="AspectFill"
+    HeightRequest="160" WidthRequest="160"  Clicked="ImageButton_Clicked1"/>
+                </Border>
+                    <!--Надпись-->
+                    <HorizontalStackLayout>
+                        <VerticalStackLayout Padding="30" VerticalOptions="End">
+                            <Label  FontSize="15" LineBreakMode="WordWrap" TextColor="White" Text="Кировка" FontFamily="Times New Roman" FontAttributes="Bold"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Grid>
+
+                <Grid Padding="5">
+                    <Border Stroke="Gray" HeightRequest="160" WidthRequest="160">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+                        <Image Source="kurchatov.jpg" Aspect="AspectFill"
+    HeightRequest="180" WidthRequest="180"  />
+                    </Border>
+                    <!--Надпись-->
+                    <HorizontalStackLayout>
+                        <VerticalStackLayout Padding="30" VerticalOptions="End">
+                            <Label Text="Памятник&#x0a;Курчатову" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Grid>
+                        
+                <Grid Padding="5">
+                    <Border Stroke="Gray" HeightRequest="160" WidthRequest="160">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+                        <Image Source="park_gagarin.jpg" Aspect="AspectFill"
+HeightRequest="160" WidthRequest="160"  />
+                    </Border>
+                    <!--Надпись-->
+                    <HorizontalStackLayout>
+                        <VerticalStackLayout Padding="30" VerticalOptions="End">
+                            <Label Text="Парк&#x0a;им. Ю.А.Гагарина" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Grid>
+
+                <Grid Padding="5">
+                    <Border Stroke="Gray" HeightRequest="160" WidthRequest="160">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+                        <Image Source="miass.jpg" Aspect="AspectFill"
+HeightRequest="160" WidthRequest="160"  />
+                    </Border>
+                    <!--Надпись-->
+                    <HorizontalStackLayout>
+                        <VerticalStackLayout Padding="30" VerticalOptions="End">
+                            <Label Text="Набережная реки&#x0a;Миасс" FontFamily="Times New Roman" FontAttributes="Bold" TextColor="White"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Grid>
+            </HorizontalStackLayout>
+        </ScrollView>
+
+
+        <Label
+          Padding="20,40,0,20"
+          Text="Мероприятия"
+          SemanticProperties.HeadingLevel="Level1"
+          FontSize="22"
+          FontAttributes="Bold"
+          FontFamily="Times New Roman"
+          HorizontalOptions="Start" />
+
+        <!--Картинки с надписью-->
+            <ScrollView Orientation="Horizontal">
+                <HorizontalStackLayout >
+                <Grid Padding="15,0,5,0">
+                    <Border Stroke="Gray" HeightRequest="180" WidthRequest="180">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Image Source="show.jpg" Aspect="AspectFill"
+            HeightRequest="180" WidthRequest="180"  />
+                    </Border>
+                    <!--Плашка для надписи-->
+                        <Border  Stroke="Gray" HeightRequest="90" WidthRequest="180"
+                           VerticalOptions="End" BackgroundColor="White">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="0,0,20,20" />
+                        </Border.StrokeShape>
+                        <Image Aspect="AspectFill"
+                            HeightRequest="180" WidthRequest="180" />
+                    </Border>
+                    <!--Надпись-->
+                        <HorizontalStackLayout >
+                        <VerticalStackLayout Padding="20" VerticalOptions="End" >
+                            <Label FontSize="14" TextColor="Black" Text="Шевченко-шоу&#x0a;«Цирк на воде»" FontFamily="Times New Roman" FontAttributes="Bold"/>
+                            <Label FontSize="12" Text="Дворец спорта «Юность»,&#x0a;просп. Свердловский, 51" TextColor="Gray" FontFamily="Times New Roman"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Grid>
+                <!--Картинки с надписью-->
+                <Grid Padding="5">
+                    <Border Stroke="Gray" HeightRequest="180" WidthRequest="180">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Image Source="orkestr.jpg" Aspect="AspectFill"
+HeightRequest="180" WidthRequest="180"  />
+                    </Border>
+                    <!--Плашка для надписи-->
+                    <Border  Stroke="Gray" HeightRequest="90" WidthRequest="180"
+               VerticalOptions="End" BackgroundColor="White">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="0,0,20,20" />
+                        </Border.StrokeShape>
+                        <Image Aspect="AspectFill"
+                HeightRequest="100" WidthRequest="180" />
+                    </Border>
+                    <!--Надпись-->
+                    <HorizontalStackLayout>
+                        <VerticalStackLayout Padding="20" VerticalOptions="End" BackgroundColor="Transparent">
+                            <Label FontSize="14" TextColor="Black" Text="Симфония&#x0a;«Король и шут»" FontFamily="Times New Roman" FontAttributes="Bold"/>
+                            <Label FontSize="12" Text="ДК Железнодорожников,&#x0a;улица Цвиллинга, 54" TextColor="Gray" FontFamily="Times New Roman"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Grid>
+
+                <Grid Padding="5">
+                    <Border Stroke="Gray" HeightRequest="180" WidthRequest="180">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Image Source="chimmer.jpg" Aspect="AspectFill"
+HeightRequest="180" WidthRequest="180"  />
+                    </Border>
+                    <!--Плашка для надписи-->
+                    <Border  Stroke="Gray" HeightRequest="90" WidthRequest="180"
+               VerticalOptions="End" BackgroundColor="White">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="0,0,20,20" />
+                        </Border.StrokeShape>
+                        <Image Aspect="AspectFill"
+                HeightRequest="100" WidthRequest="180" />
+                    </Border>
+                    <!--Надпись-->
+                    <HorizontalStackLayout>
+                        <VerticalStackLayout Padding="20" VerticalOptions="End" >
+                            <Label FontSize="14" TextColor="Black" Text="Концерт&#x0a;«Ханс Циммер OST»" FontFamily="Times New Roman" FontAttributes="Bold"/>
+                            <Label FontSize="12" Text="ДК Железнодорожников,&#x0a;улица Цвиллинга, 54" TextColor="Gray" FontFamily="Times New Roman"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Grid>
+
+            </HorizontalStackLayout>
+            </ScrollView>
+
+    </VerticalStackLayout>
+    
+</ContentPage>

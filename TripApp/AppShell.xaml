@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TripApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TripApp"
+    Shell.TabBarIsVisible="True"
+    TabBarBackgroundColor="#27AE60"
+    Shell.TabBarTitleColor="Black"
+    Shell.BackgroundColor="#27AE60"
+    >
+    <!-- Shell.FlyoutBehavior="Disabled" Боковое меню верхней панели-->
+
+    <TabBar >
+        <Tab  x:Name="MainForm" Icon="main_icon.png" >
+            <ShellContent
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+        <Tab  x:Name="MapsForm" Icon="map_icon.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:MapsPage}"
+                Route="MapsPage"
+                />
+
+        </Tab>
+        <ShellContent Route="SegmentPageKirovka" 
+           ContentTemplate="{DataTemplate local:SegmentPageKirovka}" />
+        <Tab x:Name="RoutePage" Icon="pin_icon.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:RoutePage}"
+                Route="RoutePage"/>
+        </Tab>
+
+        <Tab x:Name="ViewPage" Icon="heart_icon.png">
+            <ShellContent
+        ContentTemplate="{DataTemplate local:ViewPage}"
+        Route="ViewPage"/>
+
+        </Tab>
+
+    </TabBar>
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="FlyoutIconStyle" TargetType="Image">
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="HeightRequest" Value="200" />
+                <Setter Property="Margin" Value="0,0,0,0"/>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+   
+
+</Shell>
+

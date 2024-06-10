@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TripApp.RoutePage"
+             Title="Маршруты"
+             BackgroundColor="White" Appearing="ContentPage_Loaded">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Добавить" Clicked="ToolbarItem_Clicked" Order="Secondary"/>
+        <ToolbarItem Text="Удалить" Clicked="ToolbarItem2_Clicked" Order="Secondary"/>
+        <ToolbarItem Text="Изменить" Clicked="ToolbarItem3_Clicked" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    <VerticalStackLayout>
+        <ListView x:Name="ListRoute" RowHeight="100" ItemSelected="ListRoute_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout>
+                                <Label x:Name="nameLabel" TextColor="Black" Margin="10,10,0,0" Text="{Binding Name}" FontAttributes="Bold" FontFamily="Times New Roman" FontSize="24"/>
+                                <Label x:Name="dateLabel" TextColor="Black" Margin="10,0,0,0" Text="{Binding Date, StringFormat=\{0:D\}}" FontFamily="Times New Roman" FontSize="18"/>
+                                <Label x:Name="addressToLabel" TextColor="Black" Margin="10,0,0,0"  Text="{Binding NameAddressTo}" FontFamily="Times New Roman" FontSize="18"/>
+                                <Label x:Name="addressFromLabel" TextColor="Black" Margin="10,0,0,0"  Text="{Binding NameAddressFrom}" FontFamily="Times New Roman" FontSize="18"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             x:Class="TripApp.MapsPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White" Appearing="ContentPage_Appearing" Loaded="ContentPage_Loaded"
+             NavigatedTo="ContentPage_NavigatedTo">
+
+    <Grid >
+        <StackLayout>
+            <maps:Map x:Name="mapOnPage" IsTrafficEnabled="True" MapClicked="Layer_MapClicked"/>
+        </StackLayout>
+        <!--<Border  HorizontalOptions="Start" VerticalOptions="Start" Stroke="Gray" HeightRequest="50" WidthRequest="50">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="50" />
+            </Border.StrokeShape>
+            <Image BackgroundColor="Green"
+                HeightRequest="50" WidthRequest="50"  />
+        </Border>
+        <Border HorizontalOptions="End" VerticalOptions="Start" Stroke="Gray" HeightRequest="50" WidthRequest="50">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="50" />
+            </Border.StrokeShape>
+            <Image BackgroundColor="Green"
+     HeightRequest="50" WidthRequest="50"  />
+        </Border>
+        <StackLayout Margin="10">-->
+           
+
+
+        <!--</StackLayout>-->
+        <StackLayout HeightRequest="0">
+        </StackLayout>
+
+    </Grid>
+    
+</ContentPage>

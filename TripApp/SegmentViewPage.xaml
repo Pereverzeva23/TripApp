@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TripApp.SegmentViewPage"
+             Title="Топ Места">
+    
+    <StackLayout Padding="20">
+        <Label Text="Выставка картин" FontSize="Title" HorizontalOptions="Center" />
+        <Label Text="ЮУрГу, пр-т Ленина 76" FontSize="Subtitle" HorizontalOptions="Center" />
+        <Label Text="Дата: 15.06.2024 в 15:00" FontSize="Subtitle" HorizontalOptions="Center" />
+        <Label Text="Стоимость: бесплатно" FontSize="Subtitle" HorizontalOptions="Center" Margin="0,0,0,20" />
+
+        <Label Text="Описание" FontSize="Subtitle" HorizontalOptions="Center" />
+        <Label Text="Для Вас выставка 'ГАРМОНИЯ В МОМЕНТЕ'." FontSize="Body" />
+        <Label Text="На выставке представлены картины оригиналы начинающих и профессиональных художников из разных городов, также есть авторские копии - в единственном экземпляре!" FontSize="Body" />
+    </StackLayout>
+</ContentPage>

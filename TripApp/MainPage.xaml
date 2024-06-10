@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TripApp.MainPage"
+             BackgroundColor="White"
+             Title="Главная" Appearing="ContentPage_Loaded" >
+
+    <ScrollView >
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Спланируй поездку"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="28"
+                FontAttributes="Bold"
+                FontFamily="Times New Roman"
+                HorizontalOptions="Center" 
+                TextColor="Black"/>
+
+            <Label
+                Text="Создайте маршрут и установите дату на предстоящую поездку"
+                TextColor="Black"
+                SemanticProperties.HeadingLevel="Level2"
+                FontFamily="Times New Roman"
+                FontSize="18"
+                HorizontalOptions="Center"/>
+
+            <Entry x:Name="entryName" Placeholder="Название" FontSize="18"
+                   MaximumWidthRequest="300" TextColor="Black" Background="White" BackgroundColor="White" />
+
+            <Label FontSize="18" Text="Откуда" TextColor="Black"/>
+            <StackLayout Orientation="Horizontal">
+                
+                <Picker x:Name="streetFrom" FontSize="18" SelectedIndexChanged="streetFrom_SelectedIndexChanged"
+           MaximumWidthRequest="300" TextColor="Black" WidthRequest="150" ItemDisplayBinding="{Binding Name}"/>
+                <Picker x:Name="streetHouseFrom" FontSize="18" ItemDisplayBinding="{Binding Number}"
+MaximumWidthRequest="300" TextColor="Black" WidthRequest="150"/>
+            </StackLayout>
+
+            <Label FontSize="18" Text="Куда" TextColor="Black"/>
+            <StackLayout Orientation="Horizontal">
+                <Picker x:Name="streetTo" FontSize="18" SelectedIndexChanged="streetTo_SelectedIndexChanged"
+           MaximumWidthRequest="300" WidthRequest="150" ItemDisplayBinding="{Binding Name}" />
+                <Picker x:Name="streetHouseTo" FontSize="18" ItemDisplayBinding="{Binding Number}"
+MaximumWidthRequest="300" WidthRequest="150"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" WidthRequest="300">
+                <DatePicker x:Name="datePick" Format="dddd, dd MMMM yyyy" FontSize="18" TextColor="Black" WidthRequest="300"/>
+            </StackLayout>
+            
+            <Button
+                x:Name="CounterBtn"
+                Text="Сохранить" FontSize="18"
+                Clicked="OnCounterClicked"
+                WidthRequest="300"
+                HorizontalOptions="Center"
+                TextColor="White"
+                BackgroundColor="#27AE60"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
